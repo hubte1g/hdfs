@@ -1,0 +1,3 @@
+sqoop import --connection-manager org.apache.sqoop.teradata.TeradataConnManager --connect jdbc:teradata://10.10.10.10/database=DB_ --username $$$ --password $$$ --query "select *
+from DB_.TBL
+ " --split-by value --num-mappers 1 --fields-terminated-by '\t' --target-dir /lab/dir/TBL; 
